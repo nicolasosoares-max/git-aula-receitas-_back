@@ -1,0 +1,27 @@
+Para clonar um repositório:
+git clone (COLOQUE O LINK DO GITHUB)
+
+Abrir a pasta do repositório:
+File > Open Folder > (SELECIONE A PASTA DO REPOSITÓRIO)
+
+Criar um arquivo chamado server.js
+
+Ativar o auto save:
+File > auto save
+
+Abrir o terminal:
+Ctrl + "
+
+Iniciar o node:
+npm init -y
+
+Dentro do arquivo package.json:
+"type": "module",
+
+dentro de scripts:
+"start": "node --watch server.js"
+
+Instalar as dependencias:
+npm i fastify
+
+npm i pg
