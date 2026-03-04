@@ -11,16 +11,18 @@ const sql = new Pool({
     database: "receitas"
 })
 
-servidor.get('/usuarios', () => {
-    return 'Funcionando!'
+servidor.get('/usuarios', async () => {
+    const resultado = await sql.query('select * from usuario')
+    return resultado.rows
 })
+
 
 servidor.post('/usuarios',async (request, reply) =>{
     const body = request.body;
 
-    const resultado = await   sql.query('select * from usuario')
+    const resultado = await   sql.query('INSERT INTO usuario (nome, senha) VALUES ($1, $2)', [body.nome, body.senha])
 
-    return resultado.rows
+    return 'usuario cadastrado'
 })
 
 servidor.listen({
