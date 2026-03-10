@@ -1,4 +1,4 @@
-CREATE TABLE USUARIO (
+CREATE TABLE usuario (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255),
     senha VARCHAR(255),
@@ -7,7 +7,7 @@ CREATE TABLE USUARIO (
 );
 
 
-CREATE TABLE RECEITA (
+CREATE TABLE receitas (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255),
     ingredientes TEXT NOT NULL,
